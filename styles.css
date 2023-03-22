@@ -104,6 +104,11 @@ img {
     font-weight: 700;
 }
 
+button a {
+    color: white;
+    text-decoration: none;
+}
+
 .buttons button {
     border: none;
     outline: none;

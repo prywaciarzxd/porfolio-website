@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <script src="https://kit.fontawesome.com/47791b843d.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="static/styles.css">
+        <link rel="stylesheet" href="styles.css">
         <title>My website!</title>
-        <link rel="icon" type="image/png" href="static/website-icon.png"/>
+        <link rel="icon" type="image/png" href="website-icon.png"/>
     </head>
     <body>
         <nav class="main-nav">
@@ -13,12 +13,11 @@
                 <a href="#home" style="--i:1;"><i class="fa-solid fa-house "></i>Home</a>
                 <a href="#skills" style="--i:2;"><i class="fa-solid fa-gears "></i>Skills</a>
                 <a href="#education" style="--i:3;"><i class="fa-solid fa-graduation-cap "></i>Education</a>
-                <a href="#contact-me" style="--i:4;"><i class="fa-sharp fa-solid fa-folder-open "></i>Contact me</a>
             </div>
             <div class="nav-icons">
+                <a href="https://www.facebook.com/mateusz.kolanko.9" style="--i:6;"><i class="fa-brands fa-facebook "></i></a>
+                <a href="https://github.com/prywaciarzxd" style="--i:7;"><i class="fa-brands fa-github"></i></a>
                 <a href="https://twitter.com" style="--i:5;"><i class="fa-brands fa-twitter "></i></a>
-                <a href="https://www.facebook.com/" style="--i:6;"><i class="fa-brands fa-facebook "></i></a>
-                <a href="https://www.instagram.com/" style="--i:7;"><i class="fa-brands fa-instagram "></i></a>
             </div>
         </nav>
         <section id="home" class="home">
@@ -30,11 +29,11 @@
                     I am third year cybersecurity student, who loves to solve problems.
                 </p>
                 <div class="buttons">
-                    <button style="--i:3;">Download CV</button>
+                    <button style="--i:3;"> <a href="https://fastupload.io/vNAWg21r3SIccZK/file"> Download CV</a></button>
                 </div>
             </div>
             <div class="right-side">
-                <img  style="--i:3;" src="static/MY-IMG.jpg" alt="no-img">
+                <img  style="--i:3;" src="MY-IMG.jpg" alt="no-img">
             </div>
             <div class="right-side">
 
@@ -52,7 +51,7 @@
             <div class="courses">
                 <div class="first">
                     <h1>CISCO NETWORKING ACADEMY</h1>
-                    <img src="static/cert.png" alt="">
+                    <img src="cert.png" alt="">
                 <li><a href="#">Partner: PCAP - Programming Essentials in Python</a></li>
                 <li><a href="#">CCNAv7: Introduction to Networks</a></li>
                 <li><a href="#">CCNAv7: Switching, Routing, and Wireless Essentials</a></li>
@@ -87,32 +86,8 @@
                 </div>
             </div>
         </section>
-        <section id="contact-me" class="contact-me">
-            <form action="{{url_for('home')}}" method="post">
-                {{ form.csrf_token }}
-                {{ form.first_name.label }} {{ form.first_name(size=20) }}
-                {{ form.last_name.label }} {{ form.last_name(size=20) }}
-                {{ form.email.label }} {{ form.email(size=20) }}
-                {{ form.message.label }} {{ form.message(size=50) }}
-                <button type="submit">Send email</button>   
-                {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul class=flashes>
-                {% for message in messages %}
-                <li>{{ message }}</li>
-                {% endfor %}
-                </ul>
-            {% endif %}
-            {% endwith %}
-            {% if form.errors %}
-            </form>
-            <ul class="errors">
-            {% for error in form.errors %}
-                <li>{{ error }}</li>
-            {% endfor %}
-            </ul>
-            {% endif %}
+        <section id="contact-me" class="Projects">
             </section>
-        <script src="static/app.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
